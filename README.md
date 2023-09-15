@@ -1,19 +1,28 @@
 # proyecto-
 
 import java.util.Scanner;
+
 import java.util.ArrayList;
+
 import java.util.List;
 
 // Interfaz para los productos (sillas y mesas)
+
 interface Furniture {
+
     void create();
 }
 
 // Clase concreta para sillas
+
 class Chair implements Furniture {
+
     private String style;
+    
     private String color;
+    
     private String material;
+    
 
     public Chair(String style, String color, String material) {
         this.style = style;
