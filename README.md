@@ -14,15 +14,10 @@ interface Furniture {
 }
 
 // Clase concreta para sillas
-
 class Chair implements Furniture {
-
     private String style;
-    
     private String color;
-    
     private String material;
-    
 
     public Chair(String style, String color, String material) {
         this.style = style;
@@ -166,4 +161,6 @@ public class Fabrica {
         // Mostrar información de ventas
         for (Sale sale : sales) {
             sale.displaySaleInfo();
-        }
+                }
+    }
+}
