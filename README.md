@@ -164,3 +164,67 @@ public class Fabrica {
                 }
     }
 }
+clase materiales 
+public class Material {
+
+    private String nombre;
+    
+    private double cantidad;
+
+    public Material(String nombre) {
+    
+        this.nombre = nombre;
+    }
+
+    public void setCantidad(double cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public double getCantidad() {
+        return cantidad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Crear objetos de Material para los diferentes tipos de materiales (por ejemplo, madera y metal)
+        Material madera = new Material("Madera");
+        Material metal = new Material("Metal");
+
+        // Solicitar al usuario la cantidad de material necesario para la mesa
+        System.out.print("Cantidad de " + madera.getNombre() + " para la mesa: ");
+        double cantidadMaderaMesa = scanner.nextDouble();
+        madera.setCantidad(cantidadMaderaMesa);
+
+        System.out.print("Cantidad de " + metal.getNombre() + " para la mesa: ");
+        double cantidadMetalMesa = scanner.nextDouble();
+        metal.setCantidad(cantidadMetalMesa);
+
+        // Solicitar al usuario la cantidad de material necesario para la silla
+        System.out.print("Cantidad de " + madera.getNombre() + " para la silla: ");
+        double cantidadMaderaSilla = scanner.nextDouble();
+        madera.setCantidad(cantidadMaderaSilla);
+
+        System.out.print("Cantidad de " + metal.getNombre() + " para la silla: ");
+        double cantidadMetalSilla = scanner.nextDouble();
+        metal.setCantidad(cantidadMetalSilla);
+
+        // Calcular la cantidad total de material necesario para la mesa y la silla
+        double totalMadera = cantidadMaderaMesa + cantidadMaderaSilla;
+        double totalMetal = cantidadMetalMesa + cantidadMetalSilla;
+
+        System.out.println("Material total necesario para la mesa:");
+        System.out.println(madera.getNombre() + ": " + cantidadMaderaMesa);
+        System.out.println(metal.getNombre() + ": " + cantidadMetalMesa);
+
+        System.out.println("Material total necesario para la silla:");
+        System.out.println(madera.getNombre() + ": " + cantidadMaderaSilla);
+        System.out.println(metal.getNombre() + ": " + cantidadMetalSilla);
+
+        scanner.close();
+    }
+}
